@@ -1,13 +1,12 @@
 {
-  "version": "1.0.8",
-  "build": 9,
+  "version": "1.0.9",
+  "build": 10,
   "date": "2026-09-21",
   "minBuild": 1,
   "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
   "homepage": "",
   "notes": [
-    "生命值（红心）改为「子弹」机制：顶栏与课程内显示 5 发子弹，通关一关自动 +1 发（封顶 5）",
-    "「支持作者」新增「开通无限红心」：赞助后在弹窗内点一下即可本地开启无限子弹模式（honor system，纯前端无支付校验）",
-    "子弹补给箱与复习练习恢复均改为对应「子弹」文案与图标"
+    "「支持作者」新增 PayPal 按钮：与爱发电并列，跳转 paypal.me/clovoapp 完成打赏（honor system，无支付校验）",
+    "无限红心模式文案同步：「子弹」机制与赞助入口一致"
   ]
 }
