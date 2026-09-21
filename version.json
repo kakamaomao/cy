@@ -1,0 +1,14 @@
+{
+  "version": "1.0.2",
+  "build": 3,
+  "date": "2026-09-21",
+  "minBuild": 1,
+  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
+  "homepage": "",
+  "notes": [
+    "顶栏常驻：爱心 / 连续天数 / 经验 / 声望",
+    "安卓桌面启动图标更换为 C+У 品牌标志",
+    "语音朗读多路降级：原生 TTS → 浏览器合成 → 在线发音",
+    "移除了登录功能（仅保留本地进度存档）"
+  ]
+}
