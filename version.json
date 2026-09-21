@@ -1,12 +1,13 @@
 {
-  "version": "1.0.9",
-  "build": 10,
-  "date": "2026-09-21",
+  "version": "1.0.10",
+  "build": 11,
+  "date": "2026-09-22",
   "minBuild": 1,
   "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
   "homepage": "",
   "notes": [
-    "「支持作者」新增 PayPal 按钮：与爱发电并列，跳转 paypal.me/clovoapp 完成打赏（honor system，无支付校验）",
-    "无限红心模式文案同步：「子弹」机制与赞助入口一致"
+    "修复「练习 / 课堂」按系统返回键（含手势）直接杀进程或卡死的问题：返回键现在由 WebView 接管，逐级优雅退出",
+    "返回键行为：弹层优先关闭 → 课堂/练习中途二次确认 → 其它内页回首页 → 首页双击退出",
+    "App 内 ✕ 退出按钮与系统返回键共用同一套退出逻辑"
   ]
 }
