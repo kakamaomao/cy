@@ -1,15 +1,15 @@
 {
-  "version": "1.0.12",
-  "build": 13,
+  "version": "1.0.13",
+  "build": 14,
   "date": "2026-09-22",
   "minBuild": 1,
   "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
   "homepage": "",
   "notes": [
-    "修复启动缺陷：首页「学习路径」在打开 App 时不渲染（bind() 里对不存在的 btn-pict/btn-dict 元素设置 onclick 抛空引用，导致 init() 在 renderHome() 之前中断）；现移除此冗余绑定，看图 / 词汇标签交由通用 .tab 循环按 data-view 处理，打开即正常显示路径",
-    "新增「多场景强化」：每个关卡在原练习基础上再增加 5–6 道跨场景题型（点餐 / 问路 / 药店 / 出行等），并以新场景反复巩固旧词，而非简单重复",
-    "词汇量扩充：全部 28 个关卡在原词表上新增约 150 个高频词，覆盖场景更全、记忆更牢",
-    "赞助弹窗全面重设计：微信赞赏码独立卡片、爱发电 / PayPal 改为品牌化整行按钮（不再以「赞助解锁无限红心」为卖点）",
-    "离线发音包扩充：新增词条的乌克兰语发音已随包内置（map.js 现含 1016 条）"
+    "移除留言板功能（按用户要求）：删除 app.js 留言 UI 与 loadComments、cloud.js 的 Comments 模块、相关 CSS；云端 comments 表保留",
+    "会员功能现在 APK 也可用了：Capacitor 配置 androidScheme=https + hostname=云端域名，使 APK 的 WebView Origin 精确匹配云端，登录即会员、状态云端持久化、跨设备同步",
+    "修复启动缺陷：首页学习路径打开即显示（btn-pict/btn-dict 空引用修复）",
+    "多场景强化 + 词汇扩充（28 课 +约 300 词，离线发音 1016 条）",
+    "赞助弹窗重设计（去无限红心卖点）"
   ]
 }
