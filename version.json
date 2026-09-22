@@ -3,7 +3,7 @@
   "build": 15,
   "date": "2026-09-22",
   "minBuild": 1,
-  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
+  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk?v=1.0.14",
   "homepage": "",
   "notes": [
     "修复「APK 不支持云端」：构建脚本强制把带 hostname 的 Capacitor 配置同步进 assets 并 clean 重建，APK 的 WebView Origin 现为 https://slovo.app.workbuddy.host，精确匹配云端 → 会员登录在 APK 中真正可用",
