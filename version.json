@@ -1,16 +1,16 @@
 {
-  "version": "1.0.14",
-  "build": 15,
-  "date": "2026-09-22",
+  "version": "1.0.15",
+  "build": 16,
+  "date": "2026-09-23",
   "minBuild": 1,
-  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk?v=1.0.14",
+  "apkUrl": "https://github.com/kakamaomao/cy/releases/download/v1.0.15/slovo.apk",
   "homepage": "",
   "notes": [
-    "修复「APK 不支持云端」：构建脚本强制把带 hostname 的 Capacitor 配置同步进 assets 并 clean 重建，APK 的 WebView Origin 现为 https://slovo.app.workbuddy.host，精确匹配云端 → 会员登录在 APK 中真正可用",
-    "移除留言板功能（按用户要求）：删除 app.js 留言 UI 与 loadComments、cloud.js 的 Comments 模块、相关 CSS；云端 comments 表保留",
+    "新增「学习大富翁」：首页棋盘与 28 节课进度联动——完成一节新课棋子前进一格，落格触发奖励 / 挑战 / 复习 / 停留事件，棋子位置本地持久化",
+    "更新源改为 GitHub Releases：按版本固定的资产直链，根治 raw.githubusercontent.com 分支 CDN 缓存导致「更新」按钮下到旧包的问题（仍保留 raw 分支作为兜底）",
+    "修复「APK 不支持云端」：Capacitor 配置 androidScheme=https + hostname=云端域名，APK 的 WebView Origin 精确匹配云端 → 会员登录在 APK 中可用",
+    "移除留言板功能（按用户要求）",
     "会员功能：登录即会员、状态云端持久化、跨设备同步",
-    "修复启动缺陷：首页学习路径打开即显示（btn-pict/btn-dict 空引用修复）",
-    "多场景强化 + 词汇扩充（28 课 +约 300 词，离线发音 1016 条）",
-    "赞助弹窗重设计（去无限红心卖点）"
+    "多场景强化 + 词汇扩充（28 课 +约 300 词）"
   ]
 }
