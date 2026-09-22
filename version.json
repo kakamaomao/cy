@@ -3,7 +3,7 @@
   "build": 16,
   "date": "2026-09-23",
   "minBuild": 1,
-  "apkUrl": "https://github.com/kakamaomao/cy/releases/download/v1.0.15/slovo.apk",
+  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo-v1.0.15.apk",
   "homepage": "",
   "notes": [
     "新增「学习大富翁」：首页棋盘与 28 节课进度联动——完成一节新课棋子前进一格，落格触发奖励 / 挑战 / 复习 / 停留事件，棋子位置本地持久化",
