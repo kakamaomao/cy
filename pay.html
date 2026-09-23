@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>СЛОВО · 完成付款</title>
+<!-- Paddle.js（Paddle 加载结账窗必需） -->
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<style>
+  body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;min-height:100vh;
+       align-items:center;justify-content:center;color:#555;margin:0;background:#fafafa}
+  #box{text-align:center;padding:32px 24px;max-width:420px}
+  #msg{font-size:16px;line-height:1.7}
+  .brand{font-size:20px;font-weight:600;color:#2b2b2b;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div id="box">
+  <div class="brand">СЛОВО · 乌克兰语学习</div>
+  <div id="msg">正在打开付款窗口…</div>
+</div>
+<script>
+  // ⚠️ 把下面替换成你在 Paddle 后台 Developer Tools → Authentication 拿到的
+  // client-side token（live_ 开头）。该 token 本就设计在浏览器暴露，放公开页无妨。
+  var PADDLE_TOKEN = "live_替换为你的client_token";
+
+  Paddle.Setup({
+    token: PADDLE_TOKEN,
+    eventCallback: function (e) {
+      if (e && e.name === "checkout.completed") {
+        document.getElementById("msg").textContent = "付款成功 ✓ 可关闭此页并返回 App。";
+      }
+    }
+  });
+  // 页面 URL 带 ?_ptxn=<交易ID> 时，Paddle.js 会自动弹出结账窗，无需额外代码。
+</script>
+</body>
+</html>
