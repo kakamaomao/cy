@@ -1,15 +1,14 @@
 {
-  "version": "1.0.17",
-  "build": 18,
+  "version": "1.0.21",
+  "build": 22,
   "date": "2026-09-23",
   "minBuild": 1,
-  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo-v1.0.17.apk",
+  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo-v1.0.21.apk",
   "homepage": "",
   "notes": [
-    "会员诊断版：openAccount 在云端未连接时显示一行诊断（WBCloud 类型 / endpoint / crypto.subtle / 是否安全上下文 / origin / 初始化错误），用于精确定位真机会员不可用根因，不再盲试",
-    "云端 SDK 本地化打包（js/cloud-sdk.js）随 APK 分发，去除运行时 CDN 依赖（jsdom 探针已验证：注入 Web Crypto 后 CloudAuth.ready=true、登录链路接通）",
-    "Capacitor hostname=云端域名，APK WebView Origin 精确匹配云端",
-    "学习大富翁：首页棋盘与 28 节课进度联动；更新源采用版本化文件名直链",
-    "移除留言板功能（按用户要求）；多场景强化 + 词汇扩充"
+    "修复「点发送验证码没反应」：根因是 app 端 sendCode/verify/login 调用链无超时、且云端 SDK 的 auth 请求无超时，WebView 的 fetch 在该真机上挂起（不 resolve 也不 reject）时按钮永久停「发送中…」、无任何提示",
+    "cloud.js：所有云端方法（sendCode/verify/login/logout/session/Profile.ensure/get）包 try/catch 兜底，任何异常都返回 {error} 而非 promise reject，杜绝调用链静默崩溃",
+    "app.js：新增 withTimeout（12s）+ 给 ac-send/ac-go 两个 handler 包捕获；云端请求超时或异常时明确提示错误（HTTP 状态/code/kind）并引导「改用本机账号」",
+    "云端优先 + 本机兜底双保险不变：cloud.js 在 window.WorkBuddyCloud 可用时走云端，否则自动切本机；本机会员验证码直接显示界面、不发邮件"
   ]
 }
