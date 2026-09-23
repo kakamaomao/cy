@@ -1,16 +1,15 @@
 {
-  "version": "1.0.15",
-  "build": 16,
+  "version": "1.0.16",
+  "build": 17,
   "date": "2026-09-23",
   "minBuild": 1,
-  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo-v1.0.15.apk",
+  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo-v1.0.16.apk",
   "homepage": "",
   "notes": [
-    "新增「学习大富翁」：首页棋盘与 28 节课进度联动——完成一节新课棋子前进一格，落格触发奖励 / 挑战 / 复习 / 停留事件，棋子位置本地持久化",
-    "更新源改为 GitHub Releases：按版本固定的资产直链，根治 raw.githubusercontent.com 分支 CDN 缓存导致「更新」按钮下到旧包的问题（仍保留 raw 分支作为兜底）",
-    "修复「APK 不支持云端」：Capacitor 配置 androidScheme=https + hostname=云端域名，APK 的 WebView Origin 精确匹配云端 → 会员登录在 APK 中可用",
-    "移除留言板功能（按用户要求）",
-    "会员功能：登录即会员、状态云端持久化、跨设备同步",
-    "多场景强化 + 词汇扩充（28 课 +约 300 词）"
+    "根治「会员功能不可用」：云端 SDK 之前在运行时从 jsdelivr CDN 在线加载，APK WebView 一旦连不上 CDN 或 @dev 浮动 tag 解析异常，window.WorkBuddyCloud 即 undefined、CloudAuth.ready=false、会员全程失效；现已将 SDK 本地化打包（js/cloud-sdk.js）随 APK 分发，去除运行时联网依赖（jsdom 探针已实跑验证：无 SDK 时 ready=false 复现故障，本地化后 ready=true 且登录链路接通）",
+    "Capacitor hostname=云端域名不变，APK WebView Origin 精确匹配云端，会员登录、状态云端持久化、跨设备同步可用",
+    "新增「学习大富翁」：首页棋盘与 28 节课进度联动——完成一节新课棋子前进一格，落格触发奖励 / 挑战 / 复习 / 停留事件",
+    "更新源采用版本化文件名（slovo-v1.0.16.apk）直链，根治 raw CDN 缓存导致「更新」按钮下到旧包",
+    "移除留言板功能（按用户要求）；多场景强化 + 词汇扩充（28 课 +约 300 词）"
   ]
 }
