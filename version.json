@@ -1,13 +1,14 @@
 {
-  "version": "1.0.22",
-  "build": 23,
+  "version": "1.0.23",
+  "build": 24,
   "date": "2026-09-23",
   "minBuild": 1,
-  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo-v1.0.22.apk",
+  "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo-v1.0.23.apk",
   "homepage": "",
   "notes": [
-    "会员弹窗新增「运行版本 / 认证模式 / sendCode 是否可用」肉眼可读诊断行，便于确认设备实际跑的是哪份代码",
-    "延续 1.0.21 的修复：sendCode/verify/login 调用链 12 秒超时 + 全链路 try/catch；云端挂起必弹超时提示，绝不再静默「没反应」",
+    "【真因修复】capacitor server.hostname 由 slovo.app.workbuddy.host 改回 localhost：此前同主机名被本地服务器占用，把 /cloud/auth 等无扩展名 API 路径兜底返回本地 index.html（200/HTML），SDK 解析不到 verification_id 才报「provider returned no verification_id」。改回 localhost 后 API 走真实网络、且服务端反射 CORS 放行，云端登录/验证码彻底可用。",
+    "会员弹窗保留「运行版本 / 认证模式 / sendCode 是否可用」肉眼可读诊断行，便于确认设备实际跑的是哪份代码",
+    "sendCode/verify/login 调用链 12 秒超时 + 全链路 try/catch；云端挂起必弹超时提示，绝不再静默「没反应」",
     "云端优先 + 本机兜底双保险：window.WorkBuddyCloud 可用走云端（跨设备同步），否则自动切本机（验证码直接显示界面）"
   ]
 }
