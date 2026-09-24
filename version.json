@@ -1,13 +1,14 @@
 {
-  "version": "1.0.26",
-  "build": 27,
-  "date": "2026-09-23",
+  "version": "1.0.28",
+  "build": 29,
+  "date": "2026-09-24",
   "minBuild": 1,
   "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
   "homepage": "",
   "notes": [
-    "【Paddle 海外支付接入】会员页非高级会员区新增「用 Paddle 支付升级」入口（仅云端模式且已在 cloud-config.js 配置 SLOVO_PADDLE.backendUrl 时显示）。点击→服务端创建 Paddle 托管结账链接→浏览器支付→服务端 HMAC 验签后记录已支付→App 轮询并自写 profiles.tier 解锁高级会员，实现「真付真解锁」。对应后端见项目 server/（零依赖 Node，含 DEMO 模式与部署说明 README.md）。",
-    "沿用 1.0.24 的会员分层（普通/高级）、赞助解锁入口、云端 hostname=localhost 修复、12 秒超时兜底与诊断行。",
-    "【导航精简】底部仅保留主页/词典/会员/更新等，已移除「支持」「练习」标签（赞助整合进会员页）。"
+    "【账号体系改为仅云端】移除了本机账号兜底与「改用本机账号」入口，会员账号全部走云端（WorkBuddyCloud）。会员等级（普通 / 高级）云端持久化、跨设备同步。云端不可用时会员页提示「云端未连接」，不降级到本机账号。",
+    "【离线兜底】学习进度（XP、连续天数、已学课程、已掌握词汇、大富翁进度、声望）始终存于本机 localStorage，与会员账号无关；云端断开时首页显示「离线模式」提示条，明确告知用户可照常学习与复习，无需登录。",
+    "【高级会员解锁】走「赞助后申请」机制：点「我已赞助，申请解锁高级会员」自动向 460077152@qq.com 起草解锁申请邮件（含账号邮箱 + 用户 ID），管理员审核后用 tools/unlock_user.js 手动置 premium。Paddle 支付链路已从 App 移除。",
+    "高级会员 = 无限红心（loseBullet 在 infiniteLives 模式下不扣减，红心显示 ∞）。"
   ]
 }
