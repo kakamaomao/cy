@@ -1,11 +1,11 @@
 {
-  "version": "1.1.8",
-  "build": 44,
+  "version": "1.1.9",
+  "build": 45,
   "date": "2026-09-26",
   "minBuild": 1,
   "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
   "homepage": "",
   "notes": [
-    "【伙伴形象改版】四款载具（灵鸢/疾风/沧澜/铁驭）重绘为更卡通呆萌的风格（大眼睛、高光、腮红、微笑）；同时修复对话气泡在小屏左侧溢出框外的问题。"
+    "【目标 SDK 升级】targetSdk 由 Android 14（API 34）提升至 Android 15（API 35），消除应用商店「目标版本过低（低于最新两个大版本）」的合规警告；同步将 AGP 8.2.1→8.5.2、Gradle 8.2.1→8.9，并补充 POST_NOTIFICATIONS 权限声明。"
   ]
 }
