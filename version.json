@@ -1,11 +1,11 @@
 {
-  "version": "1.1.9",
-  "build": 45,
-  "date": "2026-09-26",
+  "version": "1.2.0",
+  "build": 46,
+  "date": "2026-09-27",
   "minBuild": 1,
   "apkUrl": "https://raw.githubusercontent.com/kakamaomao/cy/main/slovo.apk",
   "homepage": "",
   "notes": [
-    "【目标 SDK 升级】targetSdk 由 Android 14（API 34）提升至 Android 15（API 35），消除应用商店「目标版本过低（低于最新两个大版本）」的合规警告；同步将 AGP 8.2.1→8.5.2、Gradle 8.2.1→8.9，并补充 POST_NOTIFICATIONS 权限声明。"
+    "【课程扩容】新增 3 个词汇拓展单元（厨房餐食购物、家与自然动物、性格职业爱好），共 12 课，课程总数由 28 课增至 40 课；新单元词目全部取自内置分级词库，采用选择 / 配对 / 组句 / 拼写题型，离线即可完整练习。"
   ]
 }
